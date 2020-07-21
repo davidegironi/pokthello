@@ -1,0 +1,9 @@
+{
+  "name": "pokthello",
+  "description": "A Pokemon to Shakespeare description translator",
+  "author": "Davide Gironi",
+  "license": "GPLv3",
+  "scripts": {
+    "dockerbuild": "docker-compose build",
+  }
+}

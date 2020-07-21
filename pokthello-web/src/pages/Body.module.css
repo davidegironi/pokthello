@@ -1,0 +1,59 @@
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 15px;
+  height: 110px;
+  color: #FFFFFF;
+  background-color: #404040;
+}
+
+.footer {
+  height: 60px;
+  background-color: #BFBFBF;
+  font-size: 14px;
+  text-align: center;
+}
+.footertext {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main {
+  flex: 1;
+}
+
+.logocontainer {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.logo {
+  font-family: 'Aguafina Script';
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.logosub {
+  font-family: 'Aguafina Script';
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 550px) {
+  .logo {
+    font-size: 30px;
+  }
+  .logosub {
+    font-size: 15px;
+  }
+}

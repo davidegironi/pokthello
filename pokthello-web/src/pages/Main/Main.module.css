@@ -1,0 +1,120 @@
+.content {
+  width: 400px;
+  height: 100%;
+  margin: auto;
+  max-width: 100%;
+  min-height: 200px;
+  overflow: auto;
+  text-align: center;
+}
+  
+.contentfavorites {
+  width: 100%;
+  text-align: center;
+}
+
+.input {
+  width: 90%;
+  margin: 5px;
+  border-width: 2px;
+  border-color: #cccccc;
+  border-style: solid;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 7px;
+  text-transform: lowercase;
+} 
+.input:focus {
+  outline: none;
+} 
+
+.buttonround {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgba(255,255,255,0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align: center;
+  transition: all 0.2s;
+}
+.buttonround:hover{
+  border-color: rgba(255,255,255,1);
+}
+.buttonround:focus {
+  outline:0;
+}
+@media all and (max-width:30em){
+  .buttonround{
+    display: block;
+    margin: 0.2em auto;
+  }
+}
+
+.searchbutton {
+  font-size: 36px;
+  background-color: #68a54b;
+}
+
+.searchbutton {
+  font-size: 32px;
+  background-color: #68a54b;
+}
+
+.favoritesaddbutton {
+  font-size: 16px;
+  background-color: #3c7d9e;
+}
+
+.favoritesremovebutton {
+  font-size: 16px;
+  background-color: #cf6a34;
+}
+
+.favoritesitembutton {
+  font-size: 24px;
+  background-color: #dec107;
+  color: #000000;
+}
+
+.favoritesitemcontainer {
+  margin: 10px 5px 5px 5px;
+}
+
+.favoritesitem {
+  padding: 5px;
+  display: inline-block;
+}
+
+.buttonfavoritesaddcontainer {
+  text-align: right;
+}
+
+.buttonfavoritesremovecontainer {
+  text-align: left;
+}
+
+.error {
+  padding: 5px;
+  font-size: 18px;
+  color: #D11111;
+  margin-top: 20px;
+}
+
+.searchresult {
+  margin: 25px 5px 25px 5px;
+  padding: 25px;
+  background-color: #FCFFA8;
+  font-size: 36px;
+  font-family: 'Aguafina Script';
+  border-radius: 12px;
+}
+
+.searchresulttitle {
+  font-size: 40px;
+  letter-spacing: 5px;
+}
