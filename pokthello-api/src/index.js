@@ -26,10 +26,15 @@ app.use(morgan('common'));
 app.use(cors());
 app.use(express.json());
 
-// set root route
-app.get('/', (req, res) => {
-  res.json({ message: `Hamletmon API version ${packagejson.version}` });
-});
+// serve static pages
+if (process.env.SERVESTATICPAGES) {
+  app.use(express.static('public'));
+} else {
+  // set root route
+  app.get('/', (req, res) => {
+    res.json({ message: `Hamletmon API version ${packagejson.version}` });
+  });
+}
 
 // set /pokemon/:name route, cached and limited due to the shakespeareapi limit
 app.get('/pokemon/:name',
