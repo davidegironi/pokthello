@@ -92,14 +92,14 @@ app.use((req, res, next) => {
 
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
+  let error = err.message;
   if (err.response) {
     if (!err.response.status) res.status(500);
     else res.status(err.response.status);
+    if (err.response.status === 404) error = 'Pokemon or route not found';
   } else {
     res.status(500);
   }
-  let error = err.message;
-  if (err.response.status === 404) error = 'Pokemon or route not found';
   res.send({
     error,
     stack: process.env.NODE_ENV === 'production' ? '/' : err.stack,
