@@ -9,6 +9,7 @@ const cors = require('cors');
 const axios = require('axios');
 const apicache = require('apicache');
 const rateLimit = require('express-rate-limit');
+const favicon = require('serve-favicon');
 
 // import config
 require('dotenv').config();
@@ -28,6 +29,7 @@ app.use(express.json());
 
 // serve static pages
 if (process.env.SERVESTATICPAGES) {
+  app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
   app.use(express.static('public'));
 } else {
   // set root route
@@ -102,8 +104,7 @@ app.use((err, req, res, next) => {
   }
   res.send({
     error,
-    stack: err.stack,
-    //stack: process.env.NODE_ENV === 'production' ? '/' : err.stack,
+    stack: process.env.NODE_ENV === 'production' ? '/' : err.stack,
   });
 });
 
