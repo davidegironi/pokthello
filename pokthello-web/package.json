@@ -7,6 +7,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "herokubuild": "react-scripts build && rm -r ../pokthello-api/public/* && cp -r build/* ../pokthello-api/public/",
     "lint": "eslint ./src"
   },
   "dependencies": {
