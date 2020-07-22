@@ -12,7 +12,13 @@ Find a demo at **https://pokthello.herokuapp.com**
 ## Docker
 Build a Docker for the full project
 ```bash
-docker-compose up --build
+npm run dockerbuild
+```
+
+## Heorku
+Publish the project to heroku app
+```bash
+npm run herokuship
 ```
 
 ## License
