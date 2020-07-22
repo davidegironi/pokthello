@@ -6,6 +6,6 @@
   "scripts": {
     "dockerbuild": "cd pokthello-web && npm run dockerbuild && cd .. && cd pokthello-api && docker build -t pokthello .",
     "dockerrun": "docker run -p 1337:1337 pokthello",
-    "herokuship": "cd pokthello-web && npm run herokubuild && cd .. && git commit -am 'heroku push' && git push heroku `git subtree split --prefix pokthello-api master`:master --force"
+    "herokuship": "cd pokthello-web && npm run herokubuild && cd .. && git add . && git commit -am 'heroku push' && git push heroku `git subtree split --prefix pokthello-api master`:master --force"
   }
 }
