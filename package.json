@@ -5,5 +5,6 @@
   "license": "GPLv3",
   "scripts": {
     "dockerbuild": "docker-compose build",
+    "herokuship": "cd pokthello-web && npm run herokubuild && cd .. && git commit -am 'heroku push' && git push heroku `git subtree split --prefix pokthello-api master`:master --force"
   }
 }
