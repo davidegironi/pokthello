@@ -102,7 +102,8 @@ app.use((err, req, res, next) => {
   }
   res.send({
     error,
-    stack: process.env.NODE_ENV === 'production' ? '/' : err.stack,
+    stack: err.stack,
+    //stack: process.env.NODE_ENV === 'production' ? '/' : err.stack,
   });
 });
 
