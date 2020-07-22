@@ -14,6 +14,10 @@ Build a Docker for the full project
 ```bash
 npm run dockerbuild
 ```
+Run the Docker image and listen on port 1337.
+```bash
+npm run dockerrun
+```
 
 ## Heorku
 Publish the project to heroku app
